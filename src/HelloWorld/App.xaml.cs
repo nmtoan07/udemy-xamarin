@@ -13,7 +13,7 @@ namespace HelloWorld
         {
             InitializeComponent();
 
-            MainPage = new StackLayoutExercise1();
+            MainPage = new StackLayoutExercise2();
         }
 
         protected override void OnStart()
