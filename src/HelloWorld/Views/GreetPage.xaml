@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="HelloWorld.Views.GreetPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:viewModels="clr-namespace:HelloWorld.ViewModels;assembly=HelloWorld">
+    <ContentPage.BindingContext>
+        <viewModels:GreetPageViewModel />
+    </ContentPage.BindingContext>
+
+    <StackLayout>
+        <Button
+            Command="{Binding NextCommand}"
+            Text="Next"
+            TextColor="Aqua" />
+        <Label Text="{Binding FontSizeText}" />
+        <Slider
+            Maximum="50"
+            Minimum="16"
+            Value="{Binding SliderValue}" />
+        <Label FontSize="{Binding SliderValue}" Text="{Binding QuoteText}" />
+    </StackLayout>
+
+</ContentPage>
